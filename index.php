@@ -51,9 +51,26 @@ foreach ($search as $procura){
 
 //carrega um login validado//
 
-$loginValidado = new usuario();
+/*$loginValidado = new usuario();
 $loginValidado->login("joao", "qwerty");
 
 echo $loginValidado;
+*/
+
+//criando um novo usuário com Procedure
+
+/*$aluno = new usuario("aluno", "@lun0");
+
+$aluno->insert();
+
+echo $aluno;
+*/
+
+$usuario = new usuario();
+$usuario->loadById(8);
+
+$usuario->update("professor", "oioioi");
+
+echo $usuario;
 
 ?>
