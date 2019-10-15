@@ -1,7 +1,7 @@
 <?php
 
 require_once("config.php");
-
+//--------------------------------------------------------------------------------//
 //carrega um usuário//
 
 /*$root = new Usuario();
@@ -11,6 +11,7 @@ require_once("config.php");
 	echo $root;
 */
 
+//--------------------------------------------------------------------------------//
 
 //carrega um usuário com pula linha
 
@@ -25,6 +26,7 @@ foreach ($usuarios as $usuario) {
 }
 */
 
+//--------------------------------------------------------------------------------//
 
 //carrega uma lista de usuario//
 
@@ -36,6 +38,8 @@ echo json_encode($list);
 echo "<br>";
 }
 */
+
+//--------------------------------------------------------------------------------//
 
 //carrega um usuario de procura//
 
@@ -49,6 +53,8 @@ foreach ($search as $procura){
 }
 */
 
+//--------------------------------------------------------------------------------//
+
 //carrega um login validado//
 
 /*$loginValidado = new usuario();
@@ -56,6 +62,8 @@ $loginValidado->login("joao", "qwerty");
 
 echo $loginValidado;
 */
+
+//--------------------------------------------------------------------------------//
 
 //criando um novo usuário com Procedure
 
@@ -66,11 +74,25 @@ $aluno->insert();
 echo $aluno;
 */
 
-$usuario = new usuario();
+//--------------------------------------------------------------------------------//
+
+// alterar um usuário 
+
+/*$usuario = new usuario();
 $usuario->loadById(8);
 
 $usuario->update("professor", "oioioi");
 
 echo $usuario;
+*/
 
+//--------------------------------------------------------------------------------//
+
+//
+
+$usuario = new usuario();
+$usuario->loadById(7);
+$usuario->delete();
+
+echo $usuario;
 ?>
